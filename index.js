@@ -57,20 +57,24 @@ inquirer
     ])
     .then((response) => {
         // Check what license was selected and grab the badge URL for that license
-        switch (response.license){
-            case 'Apache License 2.0':
-                return '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)';
-            case 'GNU General Public License v3.0':
-                return '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)';
-            case 'MIT License':
-                return '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)';
-        }
+
+        response.license = getURL(response);
         
         fs.writeFile('README.md', writeToFile('README', response), (err) =>
         err ? console.log(err) : console.log('README was generated.'))
-    }
-  );
+    });
 
+function getURL(response){
+    switch (response.license){
+        case 'Apache License 2.0':
+            return '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)';
+        case 'GNU General Public License v3.0':
+            return '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)';
+        case 'MIT License':
+            return '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)';
+    }
+    return response.license;
+}
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
 return `#<${data.title}>
