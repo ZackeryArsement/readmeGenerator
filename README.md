@@ -54,4 +54,4 @@ The above README was created using the README Generator.
 
 A user example can be seen in the gif below:
 
-![Coding Quiz](https://github.com/ZackeryArsement/readmeGenerator/blob/images/READMEGenerator.png)
+![Coding Quiz](https://github.com/ZackeryArsement/readmeGenerator/blob/main/images/READMEGenerator.gif)
