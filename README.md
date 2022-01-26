@@ -1,4 +1,4 @@
-#<README Generator>
+<README Generator>
 
 ## Description
 
@@ -48,10 +48,12 @@ Github:
 Email:
 zarsement@hotmail.com
 
-###################################################################################
+########################################
 
 The above README was created using the README Generator.
 
-A user example can be seen in the gif below:
-
+A user example for generator a README can be seen in the gif below:
 ![Coding Quiz](https://github.com/ZackeryArsement/readmeGenerator/blob/main/images/READMEGenerator.gif)
+
+The above generated README appears on Github in the following format:
+![Coding Quiz](https://github.com/ZackeryArsement/readmeGenerator/blob/main/images/READMEGithub.gif)
