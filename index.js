@@ -2,9 +2,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-// TODO: Create an array of questions for user input
-const questions = [''];
-
 inquirer
 .prompt([
     {
@@ -58,49 +55,70 @@ inquirer
         name: 'email',
     },
     ])
-    .then((response) =>
-    fs.writeFile('README.md', writeToFile('README', response), (err) =>
-    err ? console.log(err) : console.log('README was generated.'))
+    .then((response) => {
+        // Check what license was selected and grab the badge URL for that license
+        switch (response.license){
+            case 'Apache License 2.0':
+                return '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)';
+            case 'GNU General Public License v3.0':
+                return '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)';
+            case 'MIT License':
+                return '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)';
+        }
+        
+        fs.writeFile('README.md', writeToFile('README', response), (err) =>
+        err ? console.log(err) : console.log('README was generated.'))
+    }
   );
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    return `#<${data.title}>
+return `#<${data.title}>
 
-    ## Description
+## Description
 
-    ${data.description}
+${data.description}
 
-    ## Table of Contents
+## Table of Contents
 
-    -[Installation](#installation)
-    -[Usage](#usage)
-    -[Credits](#credits)
-    -[License](#license)
-    -[Guidelines](#guidelines)
+-[Installation-Instructions](#installation-instructions)\n
+-[Usage-Information](#usage-information)\n
+-[Contributing-Guidelines](#contributing-guidelines)\n
+-[Test-Instructions](#test-instructions)\n
+-[License](#license)\n
+-[Questions](#questions?)
 
-    ## Installation
+## Installation-Instructions
 
-    ${data.installation}
+${data.installation}
 
-    ## Usage
+## Usage-Information
 
-    ${data.usage}
+${data.usage}
 
-    ## Guidelines
+## Contributing-Guidelines
 
-    ${data.guidelines}
+${data.guidelines}
 
-    ## Instructions
+## Test-Instructions
 
-    ${data.instructions}
+${data.instructions}
 
-    
-    `
+## License
+
+${data.license}
+
+## Questions?
+
+Reach out to me through Github or email!
+
+Github: 
+[Github Link](https://github.com/${data.github})
+
+Email:
+${data.email}`
 }
 
-// TODO: Create a function to initialize app
-function init() {}
-
-// Function call to initialize app
-// init();
+// [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+// [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+// [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
