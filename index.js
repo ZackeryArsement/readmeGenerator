@@ -59,7 +59,7 @@ inquirer
     },
     ])
     .then((response) =>
-    fs.writeFile('README2.md', writeToFile('README', response), (err) =>
+    fs.writeFile('README.md', writeToFile('README', response), (err) =>
     err ? console.log(err) : console.log('README was generated.'))
   );
 
