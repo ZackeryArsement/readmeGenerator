@@ -57,9 +57,8 @@ inquirer
     ])
     .then((response) => {
         // Check what license was selected and grab the badge URL for that license
-
         response.license = getURL(response);
-        
+
         fs.writeFile('README.md', writeToFile('README', response), (err) =>
         err ? console.log(err) : console.log('README was generated.'))
     });
