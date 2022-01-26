@@ -6,11 +6,6 @@ inquirer
 .prompt([
     {
         type: 'input',
-        message: 'What would you like the name of your file to be? (RECOMMENDED: "README")',
-        name: 'filename',
-    },
-    {
-        type: 'input',
         message: 'What is your project title?',
         name: 'title',
     },
@@ -64,7 +59,7 @@ inquirer
         // Check what license was selected and grab the badge URL for that license
         response.license = getURL(response);
 
-        fs.writeFile(`${response.filename}.md`, writeToFile(response), (err) =>
+        fs.writeFile(`README.md`, writeToFile(response), (err) =>
         err ? console.log(err) : console.log('README was generated.'))
     });
 
