@@ -16,7 +16,7 @@ The README Generator is used to autopopulate a general README file for a project
 
 -[License](#license)
 
--[Questions](#questions?)
+-[Questions](#questions)
 
 ## Installation-Instructions
 
@@ -38,7 +38,7 @@ This project has no test instructions...
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Questions?
+## Questions
 
 Reach out to me through Github or email!
 
@@ -54,4 +54,4 @@ The above README was created using the README Generator.
 
 A user example can be seen in the gif below:
 
-![Coding Quiz](https://github.com/ZackeryArsement/readmeGenerator/blob/main/images/READMEGenerator.png)
+![Coding Quiz](https://github.com/ZackeryArsement/readmeGenerator/blob/images/READMEGenerator.png)
