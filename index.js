@@ -76,7 +76,7 @@ function getURL(response){
 }
 // TODO: Create a function to write README file
 function writeToFile(data) {
-return `<${data.title}>
+return `# *${data.title}*
 
 ## Description
 
