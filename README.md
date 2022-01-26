@@ -1,29 +1,29 @@
 #<Weather Dashboard>
 
-    ## Description
+## Description
 
-    Input a city and it shows you a 5 day forecast!
+Input a city and it shows you a 5 day forecast!
 
-    ## Table of Contents
+## Table of Contents
 
-    -[Installation](#installation)
-    -[Usage](#usage)
-    -[Credits](#credits)
-    -[License](#license)
-    -[Guidelines](#guidelines)
+-[Installation](#installation)
+-[Usage](#usage)
+-[Credits](#credits)
+-[License](#license)
+-[Guidelines](#guidelines)
 
-    ## Installation
+## Installation
 
-    Clone the repo on this github page and add it to your local device to run!
+Clone the repo on this github page and add it to your local device to run!
 
-    ## Usage
+## Usage
 
-    Input a city to seach its weather
+Input a city to seach its weather
 
-    ## Guidelines
+## Guidelines
 
-    Zackery Arsement
+Zackery Arsement
 
-    ## Instructions
+## Instructions
 
-    Make sure the city input is a valid city
+Make sure the city input is a valid city
