@@ -52,6 +52,8 @@ zarsement@hotmail.com
 
 The above README was created using the README Generator.
 
+- ### [Usage Walkthrough](https://watch.screencastify.com/v/EMnMb8UYkPnVLPrWF0GV)
+
 A user example for generator a README can be seen in the gif below:
 ![Coding Quiz](https://github.com/ZackeryArsement/readmeGenerator/blob/main/images/READMEGenerator.gif)
 
